@@ -350,13 +350,13 @@ set_target_properties(${PROJECT_NAME} PROPERTIES INSTALL_RPATH "/usr/local/lib")
 
 # Install the executable.
 install(TARGETS ${PROJECT_NAME} DESTINATION bin/)
-install(FILES res/DSLogic.fw DESTINATION bin/res/)
-install(FILES res/DSLogic33.bin DESTINATION bin/res/)
-install(FILES res/DSLogic50.bin DESTINATION bin/res/)
-install(FILES res/DSLogicPro.fw DESTINATION bin/res/)
-install(FILES res/DSLogicPro.bin DESTINATION bin/res/)
-install(FILES res/DSCope.fw DESTINATION bin/res/)
-install(FILES res/DSCope.bin DESTINATION bin/res/)
+install(FILES res/DSLogic.fw DESTINATION share/dsview/)
+install(FILES res/DSLogic33.bin DESTINATION share/dsview/)
+install(FILES res/DSLogic50.bin DESTINATION share/dsview/)
+install(FILES res/DSLogicPro.fw DESTINATION share/dsview/)
+install(FILES res/DSLogicPro.bin DESTINATION share/dsview/)
+install(FILES res/DSCope.fw DESTINATION share/dsview/)
+install(FILES res/DSCope.bin DESTINATION share/dsview/)
 
 #===============================================================================
 #= Packaging (handled by CPack)

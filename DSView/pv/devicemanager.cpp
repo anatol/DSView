@@ -103,11 +103,16 @@ std::list<boost::shared_ptr<device::DevInst> > DeviceManager::driver_scan(
 
     // Check If DSL hardware driver
     if (strcmp(driver->name, "demo") != 0) {
+        /*
         QDir dir(QCoreApplication::applicationDirPath());
         if (!dir.cd("res"))
             return driver_devices;
         std::string str = dir.absolutePath().toStdString() + "/";
         strcpy(config_path, str.c_str());
+        */
+        // dirty
+        // maybe use  QStandardPaths::standardLocations(QStandardPaths::AppDataLocation);
+        strcpy(config_path, "/usr/share/dsview/");
     }
 
 	// Do the scan
